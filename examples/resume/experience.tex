@@ -25,13 +25,15 @@
         into Foreman and its feature set.
       \item Development of a Foreman smart-proxy plugin (Ruby) in order to orchestrate DHCP/DNS infrastructure (Bluecat DHCP/DNS Server/IPAM)
       \item Seemless installation of new bare metal as well as virtual machines hosted on VMWare vSphere.
+      \item Integration with the deployed CMDB system i-doit (Automatic creation of records and
+        updating of parameters as well as decomissioning)
       \item Automatic configuration of both
         platforms with the help of Puppet 4.x/5.x, including automatic Active Directory Joins and
         basic application deployment (chocolatey on Windows). Automatic integration with patch management
         systems (Katello for RHEL/CentOS) and WSUS for Windows Server platforms.
       \item Infrastructure landscape: several hundred to thousand machines with a multitude of
         different networks and DMZs
-      \item Technologies used: Puppet 4.x/5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Kickstart, Windows PE scripting, Windows
+      \item Technologies used: Puppet 4.x/5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows
         MDT, chocolatey, RHEL/CentOS 7.x, Windows Server 2012 R2/2016, Bluecat IPAM,DHCP/DNS Server,
         bash
       \end{cvitems}
@@ -82,7 +84,7 @@
       \end{cvitems}
     }
 \end{cventries}
-
+\clearpage
 \cvsubsection{Work history}
 \begin{cventries}
 
@@ -94,10 +96,23 @@
     {May 2011 - PRESENT} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item Delivering solutions for infrastructure automation and ease of administration in a variety of companies ranging from banks/insurance companies to automobile manufacturers and digital media agencies
+        \item Delivering solutions for infrastructure automation and ease of administration in a variety of companies ranging from banks/insurance companies to automobile manufacturers, digital media agencies and software vendors
         \item Conducting trainings in the field of configuration management and systems management technologies
         \item Giving talks about those topics at various conferences as well as writing articles in highly respected german subject literature
-        \item Typical technologies used for projects include RedHat Enterprise Linux 5-7 (including Kickstart), SUSE Linux Enterprise 11+ (with AutoYaST), Debian/Ubuntu Linux (with preseed), Puppet (with PuppetDB, hiera, r10k, rspec-puppet, beaker/testkitchen), Ansible (with ansible-vault, dynamic inventories), Chef, Salt, bash, Docker (Machine, Compose, Swarm), Python 2/3, Ruby, RedHat Satellite/Spacewalk/SUSE Manager, vagrant, packer, libvirt/KVM/Xen/VMWare
+        \item Typical technologies used in projects:
+          \begin{itemize}
+            \item OS: RedHat Enterprise Linux 5-7 (including Kickstart), SUSE Linux Enterprise 11+ (with AutoYaST), Debian/Ubuntu Linux (with preseed), some Windows Server 2012-2016, Windows 7-10
+            \item Puppet (with PuppetDB, hiera, r10k, rspec-puppet, beaker/testkitchen), Ansible (with ansible-vault, dynamic inventories), Chef, Salt
+            \item Docker (Machine, Compose, Swarm)
+            \item Python 2/3, Ruby, bash
+            \item RedHat Satellite/Spacewalk/SUSE Manager
+            \item Nagios, Icinga(1/2)
+            \item vagrant, packer, libvirt/KVM/Xen/VMWare
+            \item openvpn, iptables, Squid
+            \item Samba, NFS, ownCloud
+            \item Git, Gitlab, Github
+            \item Jenkins, Gitlab CI
+          \end{itemize}
       \end{cvitems}
     }
 %    \cvsubentry
@@ -120,7 +135,18 @@
     {Oct. 2005 - Apr. 2011} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item foo
+        \item Managing the whole IT infrastructure of the Office/Backoffice as well as training delivery.
+        \item Implementing Microsoft (Windows Server/Office/Exchange) and Linux-based solutions (Routing/Firewall/Fileserver/Backup/Monitoring) in-house and at customer sites.
+        \item Management of training delivery hardware and server systems (+150 Nodes).
+        \item Conducting trainings in the fields of Linux and general System administration.
+        \item Enduser support for Windows XP-7 as well as the MS Office Suite (2003-2007)
+        \item Typical technologies used in projects:
+          \begin{itemize}
+            \item Windows XP-7, Windows Server 2003-2008 R2, Debian Linux 5+, CentOS 5/6
+            \item Active Directory, Group Policies
+            \item IPCop, openvpn, Squid, Samba, Nagios, Bittorrent, Clonezilla
+            \item bash, PHP, Perl, VBScript, Powershell
+          \end{itemize}
       \end{cvitems}
     }
 
