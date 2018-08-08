@@ -10,6 +10,37 @@
 \cvsubsection{Key projects}
 \begin{cventries}
   \cventry
+    {Telematics solution provider}
+    {Complete reimplementation of the internal deployment and configuration management infrastructure}
+    {}
+    {}
+    {
+      \begin{cvitems}
+      \item Complete re-implementation of the internal deployment and configuration management
+        system based on Foreman (Deployment, Visualization), Spacewalk (Patchmanagement) and
+        Puppet/Ansible (Configuration management, Deployment)
+      \item Implementation of a completely unattend deployment process, including automatic
+        integration into the internal monitoring system as well as inventory management
+        (Kickstart/AutoYaST)
+      \item Migration of old Puppet code (2.x) to a new architecture featuring Puppet 5 and hiera
+        for configuration data storage. Refactoring of old code to new development paradigms.
+        Implementation of a CI pipeline for new Puppet code with automated syntax and lint tests as
+        well as deployment via r10k (Puppet control repository)
+      \item Implementation of several python-based tools to further automate different
+        administration processes like system upgrades (SLES service packs with Spacewalk) and
+        configuration of specialized internal applications. Revamp of pre-exisiting Ansible
+        playbooks used for the deployment of several key applications
+      \item Integration of the aforementioned deployment infrastructure into a ticket workflow based
+        on Jira where developers/testers may request custom system builds which will be
+        automatically deployed once a request is validated
+      \item Infrastructure landscape: hundreds of systems in several internal networks as well as
+        public facing systems
+      \item Technologies used: SUSE Linux Enterprise Server 11/12, CentOS 7.x, Ubuntu Linux
+        14.04/16.04, Puppet 5.x, Ansible, Foreman 1.17, Spacewalk 2.8, AutoYaST, Python 2/3, bash,
+        Ruby, Atlassian Jira, Atlassian Bitbucket, Mattermost, Icinga 2, ISC Bind 9, ISC dhcpd
+      \end{cvitems}
+    }
+  \cventry
     {Retail chain}
     {Implementation of a streamlined automatic deployment solution for RHEL/CentOS 7 and Windows
       Server 2012 R2/2016}
