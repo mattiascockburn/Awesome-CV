@@ -1,0 +1,174 @@
+Mattias Giese
+Arquitecto de soluciones - Ingeniero de Sistemas - Capacitador
+
+mail, bla bla....
+
+Resumen
+Arquitecto de soluciones en B1 Systems GmbH, empresa enfocada en consultoría, capacitaciones y
+desarrollo de software basado en Linux, software libre y de código abierto para numerosos proyectos
+de empresas grandes y medianas pertenecientes a distintos rubros, como fabricación de autos,
+agencias de medios y comunicaciones, bancos, aseguradoras, proveedores de servicios financieros y
+compañías de software en Europa.
+Nerd entusiasta al que le encanta Linux y toda la libertad que trae con él, obsesionado con la automatización y que disfruta trabajar con sistemas de gestión de configuración y APIs para "pegar" sistemas con el fin de crear infraestructuras y procesos increíbles, en los cuales la gente puede confiar.
+Le encanta aprender nuevas tecnologías y herramientas y le gusta difundir conocimiento sobre ellas.
+
+Habilidades
+Tecnología
+Sistemas Operativos
+Las cosas que hacen que la computadora haga “beep”
+- Microsoft Windows: XP-10, Server (weiss nicht ob vielleicht man da “servidor” schreiben soll) 2003-2016
+- Linux:
+...
+openSuse (desde 2011)
+and following: vielleicht meinst du und die folgenden? Da wäre es „y las siguientes versiones“
+
+- Certificaciones relevantes:
+Liste mit Zertifikationen
+
+Virtualización/Contenerización
+Porque computadoras pueden funcionar dentro de otras computadoras
+- Docker....
+
+-LXD en Ubuntu, también usado como 'Hypervisor' para OpenStack
+...
+...
+Oracle Virtualbox (mayormente para vagrant(was ist das?))
+
+
+Herramientas
+Cosas usadas para gestionar otras cosas
+Gestión de configuración:
+- Puppet (incluído .......)
+- Ansible (con ansible-vault, inventarios dinámicos)
+......
+
+Gestión de sistemas y parches (weiss nicht ob das so richtig ist)
+....
+Certificaciones relevantes
+- Arquitecto certificado de RedHat-Satellite 5
+- Ingeniero de ventas especialista RedHat- Automatización de Nubes (haha weiss nicht, ob es so richtig ist)
+- Administrador certificado de SUSE en gestión de sistemas
+- Profesonal certificado de Puppet 2014
+- CI/CD (¿?)
+.... (verstehe nichts davon, wir sollen das zusammen übersetzen)
+
+Programación
+Diferentes idiomas que se traducen a unos y ceros
+....
+...
+En general: Prácticas de OOP son utilizadas cuando es apropiado
+
+Idiomas
+- aleman (lengua materna)
+- inglés (competencia profesional)
+- español (básico)
+
+Habilidades personales
+Atento a los detalles
+Responsable y organizado
+Capacidad de trabajar autónomamente o en equipo
+Flexible y adaptable
+rápido aprendizaje
+
+Experiencia de trabajo
+
+Proyectos clave
+
+Reimplementación completa de la infraestructura interna de la provisión de sistemas y de la gestión de configuración
+Proveedor de soluciones telemáticas
+-Reimplementación completa del sistema interno de la provisión y de la gestión de configuración
+basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y Puppet/Ansible (gestión de configuración, provisión de software)
+-Implementación de un proceso de provisión de sistemas completamente automatizado, incluyendo integración automática en el sistema interno de monitoreo, así como gestión de inventario de sistemas (Kickstast/AutoYaST)
+- Migración de código Puppet antiguo (2.x) a una nueva arquitectura usando Puppet 5 y hiera.
+  Transformación de código antiguo a nuevos paradigmas de desarrollo. Implementación de un CI pipeline
+  automatización de nuevo código   para nuevo código Puppet con sintaxis automatizada y (lint tests?) así como despliegue a través de r10k (repositorio de control de Puppet)
+- Implementación de distintas herramientas basadas en python para continuar automatizando diferentes procesos de administración como potenciamiento (vielleicht darf man upgrade da lassen) de sistemas (paquetes de servicio SLES con Spacewalk) y configuración de aplicaciones internas especializadas. Modernización (weiss nicht ob es die richtige Übersetzung für revamp ist) de manuales pre-existentes de Ansible, usados para el despliegue de distintas aplicaciones clave
+-  Integración de la infraestructura de despliegue arriba mencionada en un flujo de trabajo de tickets (¿?) basado en Jira, donde los desarrolladores/probadores puedan requerir compilaciones de sistemas personalizados, los cuales serán automáticamente desplegados una vez que la solicitud es validada.
+-  Paisaje de infraestructuras: cientos de sistemas en distintas redes internas así como sistemas públicos (das sollen wir zusammen korrigieren, verstehe nicht so ganz :()
+- Tecnología usada: SUSE.......
+
+
+Implementación de una solución de despliegue automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
+Cadena de ventas al por menor
+- Creación de una nueva plataforma de despliegue basada en la auto-instalación de estructuras de Servidor de Windows 2012 R2/2016 (unattend....) y RedHat Enter..... basado en Katello/Foreman for completely unattend provisioning (zusammen übersetzen).
+Seite 3:
+
+Implementación de una solución de despliegue automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
+Cadena de ventas al por menor
+- Creación de una nueva plataforma de despliegue basada en la auto-instalación de estructuras de Servidor de Windows 2012 R2/2016 (unattend....) y RedHat Enter..... basada en Katello/Foreman para el aprovisionamiento completamente desatendido.
+- La implementación (el despliegue?) de Windows se realizó utilizando una imagen personalizada de Windows PE, evitando el mecanismo de instalación habitual para automatizar mejor el proceso de implementación (despliegue?) y para una mayor integración de Foreman y su conjunto de características.
+- Desarrollo de un plugin de supervisor inteligente de Foreman (Ruby) para orquestar la infraestructura FHCP/DNS (servidos DHCP / DNS / IPAN de Bluecat).
+- Instalación sin interrupciones de las máquinas virtuales nuevas y las máquinas virtuales alojadas en VMWare vSphere.
+- Integración con el sistema desplegado CMDB i-doit (creación automática de registros y actualización de parámetros, así como descompresión)
+- Configuración automática de ambas plataformas con la ayuda de Puppet 4.x / 5.x, incluidas las uniones automáticas de Active Directory y la implementación de aplicaciones básicas (chocolatey en Windows). Integración automática con sistemas de administración de parches (Katello para RHEL / CentOS) y WSUS para plataformas de servidor de Windows.
+- Paisaje de infraestructura: varios cientos a miles de máquinas con una multitud de diferentes redes y DMZ.
+- Tecnologías utilizadas: Puppet 4.x / 5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows MDT, chocolatey, RHEL / CentOS 7.x, Windows Server 2012 R2 / 2016, Bluecat IPAM, servidor DHCP / DNS, bash
+
+Implementación de un proceso de parche automático para máquinas RHEL 5-7 con auditoría / atraso
+Proveedor de servicios financieros
+- Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de parches.
+- Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta de administración de parches), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional de vulnerabilidades (nvd.nist.gov).
+- Creación de un puente a nvd.nist.gov para clasificar mejor los parches de seguridad de RedHat contra el puntaje CVSS básico del NVD debido a los requisitos de PCI-DSS
+- Desarrollo de un puente desde Satellite(¿?) en el sistema de emisión de tickets. El puente automáticamente abre nuevos tickets con sub-tareas especificadas (según demandas del cliente). El puente realiza un seguimiento automático del proceso de parchado, actualiza los tickets a medida que los sistemas se aplican y cierra automáticamente cada ticket específico tan pronto como se completa el parcheo (¿?) de una vulnerabilidad específica.
+- Además, se tuvo que crear easy to use text-mode frontend para que el ingeniero de sistemas pueda iniciar el patching (was ist das??) por sí mismo.
+- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de patching mensual se redujo de aproximadamente 2-3 días a unos 5 minutos.  
+- Tecnologías usadas: RedHat Satellite 5.x and its APIs, Python 2.7, Atlassian Jira APIs, nvd.nist.gov XML-dumps, bash
+
+Implementación de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent
+Proveedor de capacitaciones técnicas
+- El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para implementar los materiales de capacitación / máquinas virtuales y la configuración necesaria para los nuevos cursos. Como hay diferentes cursos con sus propios requisitos cada semana, cada estación de trabajo debe implementarse al menos una vez a la semana.
+- Para evitar las limitaciones de Windows y su proceso de implementación (despliegue?), se utilizó una nueva característica (en ese momento) de Windows: Arranque directo de WMI-Files
+- Con la ayuda de un sistema personalizado de Linux en vivo iniciado a través de PXE, se desplegará una nueva imagen de Windows en la máquina.
+- El sistema en vivo obtiene una lista de los recursos necesarios para el próximo curso desde una aplicación central (desarrollada en PHP)
+- A continuación, el material de curso relevante (con la descarga de peer2peer vía bittorrent) se copia a la máquina local. El uso de bittorrent es crítico aquí porque varios cursos técnicos de Microsoft son enormes en términos de tamaño de archivo (VM Images, Setups, ISO Files)
+- Después del primer inicio, varios scripts basados en VBScript y Powershell configuran la máquina para support (die veste Übersetzung suchen) el curso de las próximas semanas. Las políticas de grupo manejan la configuración genérica de las máquinas.
+- Tecnologías usadas: Debian preseed/liveiso tools, bash, aria2c/bittorrent, Windows WMI Image format, VBS, Powershell, Active Directory Group Policies, PHP
+
+Seite 4
+
+Experiencia laboral
+
+B1 Systems GmbH (Ort, Zeitraum)
+Arquitecto de soluciones
+- Generador de (ist das richtig?) soluciones para la automatización de la infraestructura y la facilidad de administración en una variedad de compañías que van desde bancos / compañías de seguros
+a fabricantes de automóviles, agencias de medios digitales y proveedores de software.
+- Realización de entrenamientos en el campo de tecnologías de gestión de configuración y gestión de sistemas.
+- Realización de charlas sobre los temas mencionados en diferentes conferencias, así como elaboracion conferencias y charlas sobre esos temas, así como publicación de artículos en literatura temática alemana altamente respetada (bin nicht sicher, ob das so richtig ist, revisamos juntos)
+- Tecnologías típicas usadas en proyectos:
+ (traducir las palabrillas entre todas las tecnologías...)
+
+signet GmbH (Ort, Zeitraum)
+Administrador del sistema y capacitador
+- Administrador de toda la infraestructura TI de la oficina / backoffice (¿?), así como training delivery (¿?)
+- Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux (Enrutamiento / Firewall / Copia de seguridad / Monitoreo) en la oficina y donde los clientes.
+- Gestión de hardware de formación (¿?) y sistemas de servidor (+150 nodos).
+- Realización de capacitaciones en los campos de Linux y administración general del sistema. 
+- Soporte de usuario final para Windows XP-7 y MS Office Suite (2003-2007).
+- Tecnologías típicas usadas en proyectos:
+bla bla bla
+
+
+Charlas / Conferencias
+
+ContinuousLifecycle 2016
+Presentador: Administración de sistemas con Puppet y Foreman
+Cómo se puede usar Foreman y Puppet para proporcionar una forma completamente desatendida de implementar y configurar sistemas en paisajes altamente complejos.
+
+Committerconf 2015
+Presentador: Despliege de aplicaciones de múltiples niveles con Docker
+Introducción de docker-machine, docker-compose y docker-swarm y cómo se pueden usar para implementar aplicaciones de varios niveles en un cluster de swarm privado (¿?)
+
+SUSECon 2015
+Presentador: Implementación de una solución de despliegue basada en SUSE usando Administrador de SUSE en la óptica Apollo (cadena óptica de Alemania)
+Presentación de la solución desarrollada por B1 utilizada para automatizar todo el proceso de despliegue de nuevos servidores de sucursal utilizados por la óptica Apollo, gran cadena minorista alemana de gafas y accesorios relacionados.
+
+LinuxCon Europe 2014
+Presentador: Intregración continua con Docker y Jenkins
+Introducción de tecnologías / técnicas que pueden ser usadas para contruir un CI /CD pipeline (¿¿¿???) basado en Docker y Jenkins
+
+LinuxTag 2014
+Presentador: Creación de una solución dinámica de despliegue de software utilizando software libre
+Cómo componentes de software (como Gitlab, Open Build Service, Jenkins, Spacewalk y Puppet / Ansible) disponibles libremente pueden ser utilizados para crear una canalización de entrega de software adecuada.
+
+
+Publicaciones 
