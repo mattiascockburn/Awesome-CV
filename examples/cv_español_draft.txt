@@ -15,7 +15,7 @@ Le encanta aprender nuevas tecnologías y herramientas y le gusta difundir conoci
 Habilidades
 Tecnología
 Sistemas Operativos
-Las cosas que hacen que la computadora haga “beep”
+Las cosas que hacen que la computadora haga 'beep'
 - Microsoft Windows: XP-10, Server (weiss nicht ob vielleicht man da “servidor” schreiben soll) 2003-2016
 - Linux:
 ...
@@ -32,7 +32,7 @@ Porque computadoras pueden funcionar dentro de otras computadoras
 -LXD en Ubuntu, también usado como 'Hypervisor' para OpenStack
 ...
 ...
-Oracle Virtualbox (mayormente para vagrant(was ist das?))
+vagrant con Oracle Virtualbox,libvirt
 
 
 Herramientas
@@ -42,7 +42,7 @@ Gestión de configuración:
 - Ansible (con ansible-vault, inventarios dinámicos)
 ......
 
-Gestión de sistemas y parches (weiss nicht ob das so richtig ist)
+Gestión de sistemas y software
 ....
 Certificaciones relevantes
 - Arquitecto certificado de RedHat-Satellite 5
@@ -61,14 +61,14 @@ En general: Prácticas de OOP son utilizadas cuando es apropiado
 Idiomas
 - aleman (lengua materna)
 - inglés (competencia profesional)
-- español (básico)
+- español (actualmente cursando nivel básico 4)
 
 Habilidades personales
 Atento a los detalles
 Responsable y organizado
 Capacidad de trabajar autónomamente o en equipo
 Flexible y adaptable
-rápido aprendizaje
+Rápido aprendizaje
 
 Experiencia de trabajo
 
@@ -80,15 +80,21 @@ Proveedor de soluciones telemáticas
 basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y Puppet/Ansible (gestión de configuración, provisión de software)
 -Implementación de un proceso de provisión de sistemas completamente automatizado, incluyendo integración automática en el sistema interno de monitoreo, así como gestión de inventario de sistemas (Kickstast/AutoYaST)
 - Migración de código Puppet antiguo (2.x) a una nueva arquitectura usando Puppet 5 y hiera.
-  Transformación de código antiguo a nuevos paradigmas de desarrollo. Implementación de un CI pipeline
-  automatización de nuevo código   para nuevo código Puppet con sintaxis automatizada y (lint tests?) así como despliegue a través de r10k (repositorio de control de Puppet)
-- Implementación de distintas herramientas basadas en python para continuar automatizando diferentes procesos de administración como potenciamiento (vielleicht darf man upgrade da lassen) de sistemas (paquetes de servicio SLES con Spacewalk) y configuración de aplicaciones internas especializadas. Modernización (weiss nicht ob es die richtige Übersetzung für revamp ist) de manuales pre-existentes de Ansible, usados para el despliegue de distintas aplicaciones clave
--  Integración de la infraestructura de despliegue arriba mencionada en un flujo de trabajo de tickets (¿?) basado en Jira, donde los desarrolladores/probadores puedan requerir compilaciones de sistemas personalizados, los cuales serán automáticamente desplegados una vez que la solicitud es validada.
--  Paisaje de infraestructuras: cientos de sistemas en distintas redes internas así como sistemas públicos (das sollen wir zusammen korrigieren, verstehe nicht so ganz :()
-- Tecnología usada: SUSE.......
+  Transformación de código antiguo a nuevos paradigmas de desarrollo. Implementación de un CI
+  pipeline para automatización de provisión de nuevo código Puppet con pruebas automaticas de
+  sintaxis, puppet-lint y otras (rubo-cop, yaml linter, etc.). Provisión de nuevo código Puppet a través de r10k (repositorio de control de Puppet)
+- Implementación de distintas herramientas basadas en python para continuar automatizando diferentes
+  procesos de administración como el upgrade de sistemas oeprativos (Suse Linux Enterprise Server
+  Service Packs con Spacewalk) y configuración de aplicaciones internas especializadas.
+  Modernización de playbooks pre-existentes de Ansible, usados para la provisión de distintas aplicaciones clave
+-  Integración de la infraestructura de provisión arriba mencionada en un flujo de trabajo de
+   tickets en Jira, donde los desarrolladores/probadores/administradores puedan requerir sistemas
+   personalizados, los cuales serán automáticamente puestos a disposición una vez que la solicitud es validada.
+-  Paisaje de infraestructuras: cientos de sistemas en distintas redes internas así como sistemas públicos
+- Tecnologías usadas: SUSE.......
 
 
-Implementación de una solución de despliegue automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
+Implementación de una solución de provisión automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
 Cadena de ventas al por menor
 - Creación de una nueva plataforma de despliegue basada en la auto-instalación de estructuras de Servidor de Windows 2012 R2/2016 (unattend....) y RedHat Enter..... basado en Katello/Foreman for completely unattend provisioning (zusammen übersetzen).
 Seite 3:
@@ -111,7 +117,7 @@ Proveedor de servicios financieros
 - Creación de un puente a nvd.nist.gov para clasificar mejor los parches de seguridad de RedHat contra el puntaje CVSS básico del NVD debido a los requisitos de PCI-DSS
 - Desarrollo de un puente desde Satellite(¿?) en el sistema de emisión de tickets. El puente automáticamente abre nuevos tickets con sub-tareas especificadas (según demandas del cliente). El puente realiza un seguimiento automático del proceso de parchado, actualiza los tickets a medida que los sistemas se aplican y cierra automáticamente cada ticket específico tan pronto como se completa el parcheo (¿?) de una vulnerabilidad específica.
 - Además, se tuvo que crear easy to use text-mode frontend para que el ingeniero de sistemas pueda iniciar el patching (was ist das??) por sí mismo.
-- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de patching mensual se redujo de aproximadamente 2-3 días a unos 5 minutos.  
+- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de patching mensual se redujo de aproximadamente 2-3 días a unos 5 minutos.
 - Tecnologías usadas: RedHat Satellite 5.x and its APIs, Python 2.7, Atlassian Jira APIs, nvd.nist.gov XML-dumps, bash
 
 Implementación de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent
@@ -142,7 +148,7 @@ Administrador del sistema y capacitador
 - Administrador de toda la infraestructura TI de la oficina / backoffice (¿?), así como training delivery (¿?)
 - Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux (Enrutamiento / Firewall / Copia de seguridad / Monitoreo) en la oficina y donde los clientes.
 - Gestión de hardware de formación (¿?) y sistemas de servidor (+150 nodos).
-- Realización de capacitaciones en los campos de Linux y administración general del sistema. 
+- Realización de capacitaciones en los campos de Linux y administración general del sistema.
 - Soporte de usuario final para Windows XP-7 y MS Office Suite (2003-2007).
 - Tecnologías típicas usadas en proyectos:
 bla bla bla
@@ -171,4 +177,4 @@ Presentador: Creación de una solución dinámica de despliegue de software utiliza
 Cómo componentes de software (como Gitlab, Open Build Service, Jenkins, Spacewalk y Puppet / Ansible) disponibles libremente pueden ser utilizados para crear una canalización de entrega de software adecuada.
 
 
-Publicaciones 
+Publicaciones
