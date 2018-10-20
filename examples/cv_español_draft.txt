@@ -96,21 +96,23 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y
 
 Implementación de una solución de provisión automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
 Cadena de ventas al por menor
-- Creación de una nueva plataforma de despliegue basada en la auto-instalación de estructuras de Servidor de Windows 2012 R2/2016 (unattend....) y RedHat Enter..... basado en Katello/Foreman for completely unattend provisioning (zusammen übersetzen).
-Seite 3:
-
-Implementación de una solución de despliegue automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
-Cadena de ventas al por menor
-- Creación de una nueva plataforma de despliegue basada en la auto-instalación de estructuras de Servidor de Windows 2012 R2/2016 (unattend....) y RedHat Enter..... basada en Katello/Foreman para el aprovisionamiento completamente desatendido.
-- La implementación (el despliegue?) de Windows se realizó utilizando una imagen personalizada de Windows PE, evitando el mecanismo de instalación habitual para automatizar mejor el proceso de implementación (despliegue?) y para una mayor integración de Foreman y su conjunto de características.
-- Desarrollo de un plugin de supervisor inteligente de Foreman (Ruby) para orquestar la infraestructura FHCP/DNS (servidos DHCP / DNS / IPAN de Bluecat).
-- Instalación sin interrupciones de las máquinas virtuales nuevas y las máquinas virtuales alojadas en VMWare vSphere.
-- Integración con el sistema desplegado CMDB i-doit (creación automática de registros y actualización de parámetros, así como descompresión)
-- Configuración automática de ambas plataformas con la ayuda de Puppet 4.x / 5.x, incluidas las uniones automáticas de Active Directory y la implementación de aplicaciones básicas (chocolatey en Windows). Integración automática con sistemas de administración de parches (Katello para RHEL / CentOS) y WSUS para plataformas de servidor de Windows.
+- Creación de una nueva plataforma de provisión automática basada en la auto-instalación de estructuras de
+  Windows 2012 R2/2016 Server (unattend.xml/Windows PE) y RedHat Enterprise Server/CentOS
+  (Kickstart) usando Katello/Foreman.
+- La provisión de Windows se realizó utilizando una imagen personalizada de Windows PE, evitando el
+  mecanismo de instalación habitual para automatizar mejor el proceso de provisión y para una mejor integración de Foreman y su conjunto de características.
+- Desarrollo de un plugin de smart-proxy de Foreman (Ruby) para orquestar la infraestructura
+  DHCP/DNS (Bluecat DHCP/DNS/IPAM).
+- Instalación sin interrupciones de las máquinas nuevas y virtuales alojadas en VMWare vSphere.
+- Integración con el sistema desplegado CMDB i-doit (creación automática de registros y actualización de parámetros, así como desmantelamiento)
+- Configuración automática de ambas plataformas (Linux/Windows) con la ayuda de Puppet 4.x/5.x,
+  incluyendo registros automáticos en Active Directory y la provisión de aplicaciones básicas
+  (chocolatey en Windows). Integración automática en Katello para RHEL / CentOS y WSUS para
+  Windows Server.
 - Paisaje de infraestructura: varios cientos a miles de máquinas con una multitud de diferentes redes y DMZ.
 - Tecnologías utilizadas: Puppet 4.x / 5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows MDT, chocolatey, RHEL / CentOS 7.x, Windows Server 2012 R2 / 2016, Bluecat IPAM, servidor DHCP / DNS, bash
 
-Implementación de un proceso de parche automático para máquinas RHEL 5-7 con auditoría / atraso
+Implementación de un proceso de  automático para máquinas RHEL 5-7 con auditoría / atraso
 Proveedor de servicios financieros
 - Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de parches.
 - Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta de administración de parches), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional de vulnerabilidades (nvd.nist.gov).
@@ -123,7 +125,7 @@ Proveedor de servicios financieros
 Implementación de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent
 Proveedor de capacitaciones técnicas
 - El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para implementar los materiales de capacitación / máquinas virtuales y la configuración necesaria para los nuevos cursos. Como hay diferentes cursos con sus propios requisitos cada semana, cada estación de trabajo debe implementarse al menos una vez a la semana.
-- Para evitar las limitaciones de Windows y su proceso de implementación (despliegue?), se utilizó una nueva característica (en ese momento) de Windows: Arranque directo de WMI-Files
+- Para evitar las limitaciones de Windows y su proceso de implementación (provisión?), se utilizó una nueva característica (en ese momento) de Windows: Arranque directo de WMI-Files
 - Con la ayuda de un sistema personalizado de Linux en vivo iniciado a través de PXE, se desplegará una nueva imagen de Windows en la máquina.
 - El sistema en vivo obtiene una lista de los recursos necesarios para el próximo curso desde una aplicación central (desarrollada en PHP)
 - A continuación, el material de curso relevante (con la descarga de peer2peer vía bittorrent) se copia a la máquina local. El uso de bittorrent es crítico aquí porque varios cursos técnicos de Microsoft son enormes en términos de tamaño de archivo (VM Images, Setups, ISO Files)
@@ -165,15 +167,15 @@ Presentador: Despliege de aplicaciones de múltiples niveles con Docker
 Introducción de docker-machine, docker-compose y docker-swarm y cómo se pueden usar para implementar aplicaciones de varios niveles en un cluster de swarm privado (¿?)
 
 SUSECon 2015
-Presentador: Implementación de una solución de despliegue basada en SUSE usando Administrador de SUSE en la óptica Apollo (cadena óptica de Alemania)
-Presentación de la solución desarrollada por B1 utilizada para automatizar todo el proceso de despliegue de nuevos servidores de sucursal utilizados por la óptica Apollo, gran cadena minorista alemana de gafas y accesorios relacionados.
+Presentador: Implementación de una solución de provisión basada en SUSE usando Administrador de SUSE en la óptica Apollo (cadena óptica de Alemania)
+Presentación de la solución desarrollada por B1 utilizada para automatizar todo el proceso de provisión de nuevos servidores de sucursal utilizados por la óptica Apollo, gran cadena minorista alemana de gafas y accesorios relacionados.
 
 LinuxCon Europe 2014
 Presentador: Intregración continua con Docker y Jenkins
 Introducción de tecnologías / técnicas que pueden ser usadas para contruir un CI /CD pipeline (¿¿¿???) basado en Docker y Jenkins
 
 LinuxTag 2014
-Presentador: Creación de una solución dinámica de despliegue de software utilizando software libre
+Presentador: Creación de una solución dinámica de provisión de software utilizando software libre
 Cómo componentes de software (como Gitlab, Open Build Service, Jenkins, Spacewalk y Puppet / Ansible) disponibles libremente pueden ser utilizados para crear una canalización de entrega de software adecuada.
 
 
