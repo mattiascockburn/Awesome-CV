@@ -95,7 +95,7 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y
 
 
 Implementación de una solución de provisión automática y optimizada para RHEL/CentOS7 y Servidor de Windows 2012 R2/2016
-Cadena de ventas al por menor
+Cadena de tiendas de ventas al por menor
 - Creación de una nueva plataforma de provisión automática basada en la auto-instalación de estructuras de
   Windows 2012 R2/2016 Server (unattend.xml/Windows PE) y RedHat Enterprise Server/CentOS
   (Kickstart) usando Katello/Foreman.
@@ -114,22 +114,41 @@ Cadena de ventas al por menor
 
 Implementación de un proceso de  automático para máquinas RHEL 5-7 con auditoría / atraso
 Proveedor de servicios financieros
-- Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de parches.
-- Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta de administración de parches), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional de vulnerabilidades (nvd.nist.gov).
-- Creación de un puente a nvd.nist.gov para clasificar mejor los parches de seguridad de RedHat contra el puntaje CVSS básico del NVD debido a los requisitos de PCI-DSS
-- Desarrollo de un puente desde Satellite(¿?) en el sistema de emisión de tickets. El puente automáticamente abre nuevos tickets con sub-tareas especificadas (según demandas del cliente). El puente realiza un seguimiento automático del proceso de parchado, actualiza los tickets a medida que los sistemas se aplican y cierra automáticamente cada ticket específico tan pronto como se completa el parcheo (¿?) de una vulnerabilidad específica.
-- Además, se tuvo que crear easy to use text-mode frontend para que el ingeniero de sistemas pueda iniciar el patching (was ist das??) por sí mismo.
-- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de patching mensual se redujo de aproximadamente 2-3 días a unos 5 minutos.
+- Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios
+  financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de actualización de
+  software.
+- Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta
+  de gestión de software), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional
+  de vulnerabilidades de Estados Unidos (NVD, nvd.nist.gov).
+-  Según los requisitos de PCI-DSS, creación de una interfaz a nvd.nist.gov para clasificar mejor las actualizaciones de seguridad de
+  RedHat según el puntaje CVSS básico del NVD
+- Desarrollo de una interfaz desde RedHat Satellite en el sistema de emisión de tickets (Jira). La
+  interfaz abre automáticamente nuevos tickets con sub-tareas especificadas (según demandas del
+  cliente). La interfaz realiza un seguimiento automático del proceso de actualización del software,
+  actualiza los tickets a medida que los sistemas se actualizan y cierra automáticamente cada ticket
+  específico tan pronto como se completa la actualización de una vulnerabilidad específica.
+- Además, se tuvo que crear una aplicación (interfaz de línea de comandos, CLI) para que el
+  ingeniero de sistemas pueda iniciar la actualización por sí mismo.
+- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de
+  actualización mensual se redujo de aproximadamente 2 a 3 días a 5 minutos.
 - Tecnologías usadas: RedHat Satellite 5.x and its APIs, Python 2.7, Atlassian Jira APIs, nvd.nist.gov XML-dumps, bash
 
-Implementación de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent
+Desarrollo de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent
 Proveedor de capacitaciones técnicas
-- El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para implementar los materiales de capacitación / máquinas virtuales y la configuración necesaria para los nuevos cursos. Como hay diferentes cursos con sus propios requisitos cada semana, cada estación de trabajo debe implementarse al menos una vez a la semana.
-- Para evitar las limitaciones de Windows y su proceso de implementación (provisión?), se utilizó una nueva característica (en ese momento) de Windows: Arranque directo de WMI-Files
-- Con la ayuda de un sistema personalizado de Linux en vivo iniciado a través de PXE, se desplegará una nueva imagen de Windows en la máquina.
+- El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para la provisión de
+  los materiales de capacitación / máquinas virtuales y la configuración necesaria para nuevos
+  cursos. Como cada semana se llevan a cabo diferentes cursos con sus propios requisitos, cada
+  estación de trabajo debe implementarse semanalmente.
+- Para evitar las limitaciones de Windows y su proceso de provisión, se utilizó una nueva
+  característica (en ese momento) de Windows: arranque directo de archivos de WMI
+- Con la ayuda de un sistema personalizado basado en Linux, iniciado a través de PXE, se proveerá una nueva imagen de Windows en la máquina.
 - El sistema en vivo obtiene una lista de los recursos necesarios para el próximo curso desde una aplicación central (desarrollada en PHP)
-- A continuación, el material de curso relevante (con la descarga de peer2peer vía bittorrent) se copia a la máquina local. El uso de bittorrent es crítico aquí porque varios cursos técnicos de Microsoft son enormes en términos de tamaño de archivo (VM Images, Setups, ISO Files)
-- Después del primer inicio, varios scripts basados en VBScript y Powershell configuran la máquina para support (die veste Übersetzung suchen) el curso de las próximas semanas. Las políticas de grupo manejan la configuración genérica de las máquinas.
+- A continuación, el material relevante del curso (con la descarga de peer2peer vía bittorrent) se
+  copia a la máquina local. El uso de bittorrent es crítico aquí porque el tamaño de los archivos de
+  varios cursos técnicos de Microsoft son muy grandes (VM Images, Setups, ISO Files)
+- Después del primer inicio (first boot), varios scripts basados en VBScript y Powershell configuran
+  la máquina para el curso que se planea llevar a cabo. Las directivas de grupo (Active Directory
+  Group Policies) manejan la configuración genérica de las máquinas.
 - Tecnologías usadas: Debian preseed/liveiso tools, bash, aria2c/bittorrent, Windows WMI Image format, VBS, Powershell, Active Directory Group Policies, PHP
 
 Seite 4
@@ -138,18 +157,21 @@ Experiencia laboral
 
 B1 Systems GmbH (Ort, Zeitraum)
 Arquitecto de soluciones
-- Generador de (ist das richtig?) soluciones para la automatización de la infraestructura y la facilidad de administración en una variedad de compañías que van desde bancos / compañías de seguros
-a fabricantes de automóviles, agencias de medios digitales y proveedores de software.
-- Realización de entrenamientos en el campo de tecnologías de gestión de configuración y gestión de sistemas.
-- Realización de charlas sobre los temas mencionados en diferentes conferencias, así como elaboracion conferencias y charlas sobre esos temas, así como publicación de artículos en literatura temática alemana altamente respetada (bin nicht sicher, ob das so richtig ist, revisamos juntos)
+- Proveedor de soluciones para la automatización de la infraestructura y la facilidad de
+  administración en distintas compañías desde bancos, compañías de seguros, fabricantes de
+  automóviles, agencias de medios digitales hasta proveedores de software.
+- Realización de capacitaciones en tecnologías de gestión de configuración y gestión de sistemas.
+- Realización de charlas sobre los temas mencionados en diferentes conferencias (Europa) y
+  publicación de artículos en revistas temáticas alemanas altamente reconocidas
 - Tecnologías típicas usadas en proyectos:
  (traducir las palabrillas entre todas las tecnologías...)
 
 signet GmbH (Ort, Zeitraum)
-Administrador del sistema y capacitador
-- Administrador de toda la infraestructura TI de la oficina / backoffice (¿?), así como training delivery (¿?)
-- Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux (Enrutamiento / Firewall / Copia de seguridad / Monitoreo) en la oficina y donde los clientes.
-- Gestión de hardware de formación (¿?) y sistemas de servidor (+150 nodos).
+Administrador de sistemas y capacitador
+- Administrador de toda la infraestructura TI de la oficina, servidores
+- Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux
+  (Enrutador / Firewall / Copia de seguridad / Monitoreo) en la oficina y para clientes.
+- Gestión de hardware para las capacitaciones y sistemas de servidor (+150 nodos).
 - Realización de capacitaciones en los campos de Linux y administración general del sistema.
 - Soporte de usuario final para Windows XP-7 y MS Office Suite (2003-2007).
 - Tecnologías típicas usadas en proyectos:
@@ -160,23 +182,67 @@ Charlas / Conferencias
 
 ContinuousLifecycle 2016
 Presentador: Administración de sistemas con Puppet y Foreman
-Cómo se puede usar Foreman y Puppet para proporcionar una forma completamente desatendida de implementar y configurar sistemas en paisajes altamente complejos.
+Cómo se puede usar Foreman y Puppet para proporcionar una forma completamente automática para
+implementar y configurar sistemas en entornos altamente complejos.
 
 Committerconf 2015
-Presentador: Despliege de aplicaciones de múltiples niveles con Docker
-Introducción de docker-machine, docker-compose y docker-swarm y cómo se pueden usar para implementar aplicaciones de varios niveles en un cluster de swarm privado (¿?)
+Presentador: Provisión de aplicaciones de múltiples niveles con Docker
+Introducción de docker-machine, docker-compose y docker-swarm y cómo se pueden usar para implementar
+aplicaciones de varios niveles en un cluster de docker-swarm privado
 
 SUSECon 2015
-Presentador: Implementación de una solución de provisión basada en SUSE usando Administrador de SUSE en la óptica Apollo (cadena óptica de Alemania)
-Presentación de la solución desarrollada por B1 utilizada para automatizar todo el proceso de provisión de nuevos servidores de sucursal utilizados por la óptica Apollo, gran cadena minorista alemana de gafas y accesorios relacionados.
+Presentador: Implementación de una solución de provisión basada en SUSE usando SUSE Manager en la
+óptica Apollo (cadena óptica de Europa)
+Presentación de la solución desarrollada por B1 utilizada para automatizar todo el proceso de
+provisión de servidores utilizados por la óptica Apollo a nuevas sucursales (gran cadena minorista
+europea de gafas y accesorios relacionados)
 
 LinuxCon Europe 2014
 Presentador: Intregración continua con Docker y Jenkins
-Introducción de tecnologías / técnicas que pueden ser usadas para contruir un CI /CD pipeline (¿¿¿???) basado en Docker y Jenkins
+Introducción de tecnologías / técnicas que pueden ser usadas para contruir un CI/CD pipeline basado en Docker y Jenkins
 
 LinuxTag 2014
 Presentador: Creación de una solución dinámica de provisión de software utilizando software libre
-Cómo componentes de software (como Gitlab, Open Build Service, Jenkins, Spacewalk y Puppet / Ansible) disponibles libremente pueden ser utilizados para crear una canalización de entrega de software adecuada.
+Cómo componentes de software (como Gitlab, Open Build Service, Jenkins, Spacewalk y Puppet /
+Ansible) disponibles libremente pueden ser utilizados para crear un pipeline de software delivery adecuado.
 
 
 Publicaciones
+
+Aplicaciones multinivel con Docker Compose, Machine y Swarm
+revista heise Developer
+Descripción de cómo docker y sus tecnologías asociadas pueden ser usadas para proveer una aplicación
+de multiples componentes basada en contenedores dentro de un cluster de maquinas en distintos
+estadios.
+
+
+Harbour Worker - DevOps-Trend Docker
+revista LinuxMagazin
+Sept. 2014
+Introducción de nuevas características de la versión 1.0 de Docker y cómo pueden ser usadas.
+
+Stack more intelligently
+revista LinuxMagazin
+Sept. 2014
+Introducción de docker-compose y demostración de su uso con diferentes aplicaciones que cuentan
+múltiples componentes
+
+
+Order on the construction site - comfortable systems management with Foreman and
+Puppet
+revista heise IX
+Dec. 2013
+Descripción de cómo Foreman y Puppet pueden ser usados para crear una solución altamente
+automatizada para la provisión y gestión de sistemas para la empresa moderna.
+
+Educacion
+Cámara de industria y comercio
+Kassel, Alemania
+Carrera técnica: Especialista en informática con especialización en integración de sistemas
+2009
+
+Max-Eyth-Schule
+Kassel, Alemania
+Instituto de formación profesional superior.
+Tecnología informática
+2005
