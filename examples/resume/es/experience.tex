@@ -1,0 +1,185 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Work Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\cvsubsection{Key projects}
+\begin{cventries}
+  \cventry
+    {Telematics solution provider}
+    {Complete reimplementation of the internal deployment and configuration management infrastructure}
+    {}
+    {}
+    {
+      \begin{cvitems}
+      \item Complete re-implementation of the internal deployment and configuration management
+        system based on Foreman (Deployment, Visualization), Spacewalk (Patchmanagement) and
+        Puppet/Ansible (Configuration management, Deployment)
+      \item Implementation of a completely unattend deployment process, including automatic
+        integration into the internal monitoring system as well as inventory management
+        (Kickstart/AutoYaST)
+      \item Migration of old Puppet code (2.x) to a new architecture featuring Puppet 5 and hiera
+        for configuration data storage. Refactoring of old code to new development paradigms.
+        Implementation of a CI pipeline for new Puppet code with automated syntax and lint tests as
+        well as deployment via r10k (Puppet control repository)
+      \item Implementation of several python-based tools to further automate different
+        administration processes like system upgrades (SLES service packs with Spacewalk) and
+        configuration of specialized internal applications. Revamp of pre-exisiting Ansible
+        playbooks used for the deployment of several key applications
+      \item Integration of the aforementioned deployment infrastructure into a ticket workflow based
+        on Jira where developers/testers may request custom system builds which will be
+        automatically deployed once a request is validated
+      \item Infrastructure landscape: hundreds of systems in several internal networks as well as
+        public facing systems
+      \item Technologies used: SUSE Linux Enterprise Server 11/12, CentOS 7.x, Ubuntu Linux
+        14.04/16.04, Puppet 5.x, Ansible, Foreman 1.17, Spacewalk 2.8, AutoYaST, Python 2/3, bash,
+        Ruby, Atlassian Jira, Atlassian Bitbucket, Mattermost, Icinga 2, ISC Bind 9, ISC dhcpd
+      \end{cvitems}
+    }
+  \cventry
+    {Retail chain}
+    {Implementation of a streamlined automatic deployment solution for RHEL/CentOS 7 and Windows
+      Server 2012 R2/2016}
+    {}
+    {}
+    {
+      \begin{cvitems}
+      \item Creation of a completely new deployment platform based on the autoinstallation
+        frameworks of Windows Server 2012 R2/2016 (unattend.xml/Windows PE) and RedHat Enterprise
+        Linux/CentOS (Kickstart) based on Katello/Foreman for completely unattend provisioning.
+      \item Windows Deployment was done using a custom Windows PE image, bypassing the regular
+        installation mechanism to better automate the deployment process and for tighter integration
+        into Foreman and its feature set.
+      \item Development of a Foreman smart-proxy plugin (Ruby) in order to orchestrate DHCP/DNS infrastructure (Bluecat DHCP/DNS Server/IPAM)
+      \item Seemless installation of new bare metal as well as virtual machines hosted on VMWare vSphere.
+      \item Integration with the deployed CMDB system i-doit (Automatic creation of records and
+        updating of parameters as well as decomissioning)
+      \item Automatic configuration of both
+        platforms with the help of Puppet 4.x/5.x, including automatic Active Directory Joins and
+        basic application deployment (chocolatey on Windows). Automatic integration with patch management
+        systems (Katello for RHEL/CentOS) and WSUS for Windows Server platforms.
+      \item Infrastructure landscape: several hundred to thousand machines with a multitude of
+        different networks and DMZs
+      \item Technologies used: Puppet 4.x/5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows
+        MDT, chocolatey, RHEL/CentOS 7.x, Windows Server 2012 R2/2016, Bluecat IPAM,DHCP/DNS Server,
+        bash
+      \end{cvitems}
+    }
+
+  \cventry
+    {Financial services provider} {Implementation of an automated patch process for RHEL 5-7 machines with complete audit/backlog} {}
+    {}
+    {
+      \begin{cvitems}
+      \item Being bound to security standards like PCI-DSS my company was approached by a german
+        fincial service provider to help automate their patch procedures.
+      \item Several tools had to be
+        integrated/orchestrated: RedHat Satellite 5.x (Patch management tool), Atlassian Jira
+        (ticketing system/audit), National Vulnerability Database (nvd.nist.gov).
+      \item Creation of a bridge to nvd.nist.gov in order to better classify security patches from
+        RedHat against the CVSS base score of the NVD because of PCI-DSS requirements
+      \item Development of a bridge from Satellite into the ticketing system. The bridge
+        automatically opens new tickets with specified subtasks (as demanded by the customer). The
+        bridge automatically keeps track of the patching process, updates tickets as systems are
+        getting patched and automatically closes each specific ticket as soon as patching a specific
+        vulnerability is completed.
+      \item Additionally an easy to use text-mode frontend had to be created for the systems engineer to initiate the patching itself.
+      \item Upon conpletion of this project the overall time needed to manage the monthly patching
+        process was reduced from roughly 2-3 days to around 5 minutes.
+      \item Technologies used: RedHat Satellite 5.x and its APIs, Python 2.7, Atlassian Jira APIs,
+        nvd.nist.gov XML-dumps, bash
+      \end{cvitems}
+    }
+
+  \cventry
+    {Provider of technical trainings}
+    {Implementation of an automatic deployment system for Windows 7 and technical training resources based on Linux/Bittorrent}
+    {}
+    {}
+    {
+      \begin{cvitems}
+      \item The training provider i worked at needed a better process to deploy the training materials/virtual machines and configuration needed for new courses. As there are different courses with their own requirements each week, every workstation needed to be deployed at least once a week.
+      \item To work around the limitations of Windows and its deployment process a new (at the time) feature of Windows was used: Direct booting of WMI-Files
+      \item With the help of a custom Linux live system booted via PXE, a new Windows Image will deployed to the machine
+      \item The live system obtains a list of needed resources for the next course from a central application (developed in PHP)
+      \item Then the relevant courseware (with peer2peer download via bittorrent) is copied to the local machine. The usage of bittorrent is critical here because several Microsoft technical courses are huge in terms of filesize (VM Images, Setups, ISO Files)
+      \item After the first boot, several VBScript and Powershell based scripts configure the
+        machine in order to support the next weeks course. Group policies handle the generic
+        configuration of the machines.
+      \item Technologies used: Debian preseed/liveiso tools, bash, aria2c/bittorrent, Windows WMI
+        Image format, VBS, Powershell, Active Directory Group Policies, PHP
+      \end{cvitems}
+    }
+\end{cventries}
+\clearpage
+\cvsubsection{Work history}
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Solution Architect} % Job title
+    {B1 Systems GmbH} % Organization
+    {Vohburg, Germany} % Location
+    {May 2011 - PRESENT} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item Delivering solutions for infrastructure automation and ease of administration in a variety of companies ranging from banks/insurance companies to automobile manufacturers, digital media agencies and software vendors
+        \item Conducting trainings in the field of configuration management and systems management technologies
+        \item Giving talks about those topics at various conferences as well as writing articles in highly respected german subject literature
+        \item Typical technologies used in projects:
+          \begin{itemize}
+            \item OS: RedHat Enterprise Linux 5-7 (including Kickstart), SUSE Linux Enterprise 11+ (with AutoYaST), Debian/Ubuntu Linux (with preseed), some Windows Server 2012-2016, Windows 7-10
+            \item Puppet (with PuppetDB, hiera, r10k, rspec-puppet, beaker/testkitchen), Ansible (with ansible-vault, dynamic inventories), Chef, Salt
+            \item Docker (Machine, Compose, Swarm)
+            \item Python 2/3, Ruby, bash
+            \item RedHat Satellite/Spacewalk/SUSE Manager
+            \item Nagios, Icinga(1/2)
+            \item vagrant, packer, libvirt/KVM/Xen/VMWare
+            \item openvpn, iptables, Squid
+            \item Samba, NFS, ownCloud
+            \item Git, Gitlab, Github
+            \item Jenkins, Gitlab CI
+          \end{itemize}
+      \end{cvitems}
+    }
+%    \cvsubentry
+%    {Key projects}
+%    {}
+%    {}
+%    {}
+%    {
+%      \begin{cvitems}
+%      \item foo
+%      \item bar
+%      \end{cvitems}
+%    }
+
+%---------------------------------------------------------
+  \cventry
+    {System Administrator \& Teacher} % Job title
+    {signet GmbH} % Organization
+    {Kassel, Germany} % Location
+    {Oct. 2005 - Apr. 2011} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item Managing the whole IT infrastructure of the Office/Backoffice as well as training delivery.
+        \item Implementing Microsoft (Windows Server/Office/Exchange) and Linux-based solutions (Routing/Firewall/Fileserver/Backup/Monitoring) in-house and at customer sites.
+        \item Management of training delivery hardware and server systems (+150 Nodes).
+        \item Conducting trainings in the fields of Linux and general System administration.
+        \item Enduser support for Windows XP-7 as well as the MS Office Suite (2003-2007)
+        \item Typical technologies used in projects:
+          \begin{itemize}
+            \item Windows XP-7, Windows Server 2003-2008 R2, Debian Linux 5+, CentOS 5/6
+            \item Active Directory, Group Policies
+            \item IPCop, openvpn, Squid, Samba, Nagios, Bittorrent, Clonezilla
+            \item bash, PHP, Perl, VBScript, Powershell
+          \end{itemize}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
