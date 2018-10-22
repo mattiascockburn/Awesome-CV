@@ -16,8 +16,7 @@
     {}
     {
       \begin{cvitems}
-      \item Reimplementación completa del sistema interno de la provisión y de la gestión de configuración
-basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y Puppet/Ansible (gestión de configuración, provisión de software)
+      \item Reimplementación completa del sistema interno de la provisión y de la gestión de configuración basado en Foreman (provisión y visualización), Spacewalk (gestión de software) y Puppet/Ansible (gestión de configuración, provisión de software)
  \item Implementación de un proceso de provisión de sistemas completamente automatizado, incluyendo integración automática en el sistema interno de monitoreo, así como gestión de inventario de sistemas (Kickstast/AutoYaST)
  \item Migración de código Puppet antiguo (2.x) a una nueva arquitectura usando Puppet 5 y hiera.
   Transformación de código antiguo a nuevos paradigmas de desarrollo. Implementación de un CI
@@ -27,15 +26,14 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
   procesos de administración como el upgrade de sistemas oeprativos (Suse Linux Enterprise Server
   Service Packs con Spacewalk) y configuración de aplicaciones internas especializadas.
   Modernización de playbooks pre-existentes de Ansible, usados para la provisión de distintas aplicaciones clave
-\item Integración de la infraestructura de provisión arriba mencionada en un flujo de trabajo de
-   tickets en Jira, donde los desarrolladores/probadores/administradores puedan requerir sistemas
-   personalizados, los cuales serán automáticamente puestos a disposición una vez que la solicitud es validada.
+\item Integración de la infraestructura de provisión arriba mencionada en un flujo de trabajo de tickets en Jira,
+  donde los desarrolladores/probadores/administradores puedan requerir sistemas personalizados,
+  los cuales serán automáticamente puestos a disposición una vez que la solicitud es validada.
  \item Paisaje de infraestructuras: cientos de sistemas en distintas redes internas así como sistemas públicos
- \item Tecnologías usadas: SUSE Linux Enterprise Server 11/12, CentOS 7.x, Ubuntu Linux
-        14.04/16.04, Puppet 5.x, Ansible, Foreman 1.17, Spacewalk 2.8, AutoYaST, Python 2/3, bash,
-        Ruby, Atlassian Jira, Atlassian Bitbucket, Mattermost, Icinga 2, ISC Bind 9, ISC dhcpd
+ \item Tecnologías usadas: SUSE Linux Enterprise Server 11/12, CentOS 7.x, Ubuntu Linux 14.04/16.04, Puppet 5.x, Ansible, Foreman 1.17, Spacewalk 2.8, AutoYaST, Python 2/3, bash, Ruby, Atlassian Jira, Atlassian Bitbucket, Mattermost, Icinga 2, ISC Bind 9, ISC dhcpd
       \end{cvitems}
     }
+
   \cventry
     {Cadena de tiendas de ventas al por menor}
     {Implementación de una solución de provisión automática y optimizada para RHEL/CentOS 7 y Windows Server 2012 R2/2016}
@@ -43,18 +41,17 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
     {}
     {
       \begin{cvitems}
-      \item Creación de una nueva plataforma de provisión automática basada en la auto-instalación de estructuras de
-      Windows 2012 R2/2016 Server (unattend.xml/Windows PE) y RedHat Enterprise Server/CentOS (Kickstart) usando Katello/Foreman.
-      \item La provisión de Windows se realizó utilizando una imagen personalizada de Windows PE, evitando el mecanismo de instalación habitual para automatizar mejor el proceso de provisión y para una mejor integración de Foreman y su conjunto de características.
-      \item Desarrollo de un plugin de smart-proxy de Foreman (Ruby) para orquestar la infraestructura DHCP/DNS (Bluecat DHCP/DNS/IPAM).
-      \item Instalación sin interrupciones de las máquinas nuevas y virtuales alojadas en VMWare vSphere.
-      \item Integración con el sistema desplegado CMDB i-doit (creación automática de registros y actualización de parámetros, así como desmantelamiento)
-      \item Configuración automática de ambas plataformas (Linux/Windows) con la ayuda de Puppet 4.x/5.x,
-      incluyendo registros automáticos en Active Directory y la provisión de aplicaciones básicas
-      (chocolatey en Windows). Integración automática en Katello para RHEL / CentOS y WSUS para Windows Server.
-      \item Paisaje de infraestructura: varios cientos a miles de máquinas con una multitud de diferentes redes y DMZ.
-      \item Tecnologías utilizadas: Puppet 4.x / 5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows MDT, chocolatey, RHEL / CentOS 7.x, Windows Server 2012 R2 / 2016, Bluecat IPAM, servidor DHCP / DNS, bash
-
+        \item Creación de una nueva plataforma de provisión automática basada en la auto-instalación de estructuras de
+        Windows 2012 R2/2016 Server (unattend.xml/Windows PE) y RedHat Enterprise Server/CentOS (Kickstart) usando Katello/Foreman.
+        \item La provisión de Windows se realizó utilizando una imagen personalizada de Windows PE, evitando el mecanismo de instalación habitual para automatizar mejor el proceso de provisión y para una mejor integración de Foreman y su conjunto de características.
+        \item Desarrollo de un plugin de smart-proxy de Foreman (Ruby) para orquestar la infraestructura DHCP/DNS (Bluecat DHCP/DNS/IPAM).
+        \item Instalación sin interrupciones de las máquinas nuevas y virtuales alojadas en VMWare vSphere.
+        \item Integración con el sistema desplegado CMDB i-doit (creación automática de registros y actualización de parámetros, así como desmantelamiento)
+        \item Configuración automática de ambas plataformas (Linux/Windows) con la ayuda de Puppet 4.x/5.x,
+        incluyendo registros automáticos en Active Directory y la provisión de aplicaciones básicas
+        (chocolatey en Windows). Integración automática en Katello para RHEL / CentOS y WSUS para Windows Server.
+        \item Paisaje de infraestructura: varios cientos a miles de máquinas con una multitud de diferentes redes y DMZ
+        \item Tecnologías utilizadas: Puppet 4.x / 5.x, Foreman 1.13-1.15, Katello 3.x, Ruby 2.1, Python 3, Kickstart, Windows PE scripting, Windows MDT, chocolatey, RHEL / CentOS 7.x, Windows Server 2012 R2 / 2016, Bluecat IPAM, servidor DHCP / DNS, bash
       \end{cvitems}
     }
 
@@ -62,60 +59,48 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
     {Proveedor de servicios financieros}
     {Implementación de un proceso de  automático para máquinas RHEL 5-7 con auditoría / atraso}
     {}
+    {}
     {
       \begin{cvitems}
-      \item  Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios
- financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de actualización de
- software.
- \item  Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta
- de gestión de software), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional
- de vulnerabilidades de Estados Unidos (NVD, nvd.nist.gov).
- \item Según los requisitos de PCI-DSS, creación de una interfaz a nvd.nist.gov para clasificar mejor las actualizaciones de seguridad de
- RedHat según el puntaje CVSS básico del NVD
- \item  Desarrollo de una interfaz desde RedHat Satellite en el sistema de emisión de tickets (Jira). La
- interfaz abre automáticamente nuevos tickets con sub-tareas especificadas (según demandas del
- cliente). La interfaz realiza un seguimiento automático del proceso de actualización del software,
- actualiza los tickets a medida que los sistemas se actualizan y cierra automáticamente cada ticket
- específico tan pronto como se completa la actualización de una vulnerabilidad específica.
- \item Además, se tuvo que crear una aplicación (interfaz de línea de comandos, CLI) para que el
- ingeniero de sistemas pueda iniciar la actualización por sí mismo.
- Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de
- actualización mensual se redujo de aproximadamente 2 a 3 días a 5 minutos.
- Tecnologías usadas: RedHat Satellite 5.x API, Python 2.7, Atlassian Jira APIs, base de
- datos (XML) de nvd.nist.gov, bash
+      \item Al estar sujeto a los estándares de seguridad como PCI-DSS, un proveedor alemán de servicios financieros contactó a mi compañía para ayudar a automatizar sus procedimientos de actualización de software.
+ \item Varias herramientas tuvieron que ser integradas / orquestadas: RedHat Satellite 5.x (Herramienta de gestión de software), Atlassian Jira (sistema de tickets / auditoría), Base de datos nacional de vulnerabilidades de Estados Unidos (NVD, nvd.nist.gov).
+ \item Según los requisitos de PCI-DSS, creación de una interfaz a nvd.nist.gov para clasificar mejor las actualizaciones de seguridad de RedHat según el puntaje CVSS básico del NVD
+ \item Desarrollo de una interfaz desde RedHat Satellite en el sistema de emisión de tickets (Jira). La interfaz abre automáticamente nuevos tickets con sub-tareas especificadas (según demandas del cliente).
+ \item La interfaz realiza un seguimiento automático del proceso de actualización del software, actualiza los tickets a medida que los sistemas se actualizan y cierra automáticamente cada ticket específico tan pronto como se completa la actualización de una vulnerabilidad específica.
+ \item Además, se tuvo que crear una aplicación (interfaz de línea de comandos, CLI) para que el ingeniero de sistemas pueda iniciar la actualización por sí mismo. Tras la implementación de este proyecto, el tiempo total necesario para gestionar el proceso de actualización mensual se redujo de aproximadamente 2 a 3 días a 5 minutos.
+ \item Tecnologías usadas: RedHat Satellite 5.x API, Python 2.7, Atlassian Jira APIs, base de datos (XML) de nvd.nist.gov, bash
       \end{cvitems}
     }
 
   \cventry
     {Proveedor de capacitaciones técnicas}
     {Desarrollo de un sistema de implementación automática para Windows 7 y recursos de capacitación técnica basados en Linux / Bittorrent}
-
     {}
     {}
     {
       \begin{cvitems}
-      \item  El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para la provisión de
- los materiales de capacitación / máquinas virtuales y la configuración necesaria para nuevos
- cursos. Como cada semana se llevan a cabo diferentes cursos con sus propios requisitos, cada
- estación de trabajo debe implementarse semanalmente.
- \item  Para evitar las limitaciones de Windows y su proceso de provisión, se utilizó una nueva
- característica (en ese momento) de Windows: arranque directo de archivos de WMI
- Con la ayuda de un sistema personalizado basado en Linux, iniciado a través de PXE, se proveerá una nueva imagen de Windows en la máquina.
- \item El sistema en vivo obtiene una lista de los recursos necesarios para el próximo curso desde una aplicación central (desarrollada en PHP)
- \item A continuación, el material relevante del curso (con la descarga de peer2peer vía bittorrent) se
- copia a la máquina local. El uso de bittorrent es crítico aquí porque el tamaño de los archivos de
- varios cursos técnicos de Microsoft son muy grandes (VM Images, Setups, ISO Files)
- \item Después del primer inicio (first boot), varios scripts basados en VBScript y Powershell configuran
- la máquina para el curso que se planea llevar a cabo. Las directivas de grupo (Active Directory
- Group Policies) manejan la configuración genérica de las máquinas.
- \item Tecnologías usadas: Debian preseed/liveiso tools, bash, aria2c/bittorrent, Windows WMI Image
-   format, VBS, Powershell, Las directivas de grupo (Active Directory), PHP
-
+      \item El proveedor de capacitación en el que trabajé necesitaba un mejor proceso para la provisión de
+        los materiales de capacitación / máquinas virtuales y la configuración necesaria para nuevos
+        cursos. Como cada semana se llevan a cabo diferentes cursos con sus propios requisitos, cada
+        estación de trabajo debe implementarse semanalmente.
+      \item  Para evitar las limitaciones de Windows y su proceso de provisión, se utilizó una nueva
+        característica (en ese momento) de Windows: arranque directo de archivos de WMI
+        Con la ayuda de un sistema personalizado basado en Linux, iniciado a través de PXE, se proveerá una nueva imagen de Windows en la máquina.
+      \item El sistema en vivo obtiene una lista de los recursos necesarios para el próximo curso desde una aplicación central (desarrollada en PHP)
+      \item A continuación, el material relevante del curso (con la descarga de peer2peer vía bittorrent) se
+        copia a la máquina local. El uso de bittorrent es crítico aquí porque el tamaño de los archivos de
+        varios cursos técnicos de Microsoft son muy grandes (VM Images, Setups, ISO Files)
+      \item Después del primer inicio (first boot), varios scripts basados en VBScript y Powershell configuran
+        la máquina para el curso que se planea llevar a cabo. Las directivas de grupo (Active Directory
+        Group Policies) manejan la configuración genérica de las máquinas.
+      \item Tecnologías usadas: Debian preseed/liveiso tools, bash, aria2c/bittorrent, Windows WMI Image
+        format, VBS, Powershell, Las directivas de grupo (Active Directory), PHP
       \end{cvitems}
     }
 \end{cventries}
 \clearpage
-\cvsubsection{Work history}
+
+\cvsubsection{Experiencia laboral}
 \begin{cventries}
 
 %---------------------------------------------------------
@@ -123,7 +108,7 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
   {Arquitecto de soluciones}
   {B1 Systems GmbH} % Organization
   {Vohburg, Alemania} % Location
-  {Mayo 2011 - Enero 2018} % Date(s)
+  {Mayo 2011 a Enero 2018} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
       \item Proveedor de soluciones para la automatización de la infraestructura y la facilidad de
@@ -134,14 +119,12 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
       publicación de artículos en revistas temáticas alemanas altamente reconocidas
       \item Tecnologías típicas usadas en proyectos:
           \begin{itemize}
-            \item OS: RedHat Enterprise Linux 5-7 (incluyendo Kickstart), SUSE Linux Enterprise 11+
-              (con AutoYaST), Debian/Ubuntu Linux (con preseed), a veces Windows Server 2012-2016, Windows 7-10
-            \item Puppet (incluyendo PuppetDB, hiera, r10k, rspec-puppet, beaker/testkitchen),
-              Ansible (con ansible-vault, inventarios dinámica), Chef, Salt
+            \item OS: RedHat Enterprise Linux 5-7 (incluyendo Kickstart), SUSE Linux Enterprise 11+ (con AutoYaST), Debian/Ubuntu Linux (con preseed), a veces Windows Server 2012-2016, Windows 7-10
+            \item Puppet (incluyendo PuppetDB, hiera, r10k, rspec-puppet, beaker/testkitchen), Ansible (con ansible-vault, inventarios dinámica), Chef, Salt
             \item Docker (Machine, Compose, Swarm)
             \item Python 2/3, Ruby, bash
             \item RedHat Satellite/Spacewalk/SUSE Manager
-            \item Nagios, Icinga(1/2)
+            \item Nagios, Icinga (1/2)
             \item vagrant, packer, libvirt/KVM/Xen/VMWare
             \item openvpn, iptables, Squid
             \item Samba, NFS, ownCloud
@@ -169,20 +152,20 @@ basado en Foreman (provisión y visualización), Spacewalk (gestión de software
     {Kassel, Alemania} % Location
     {Octubre 2005 - Abril 2011} % Date(s)
     {
-    \item Administrador de toda la infraestructura TI de la oficina, servidores
-    \item Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux
-    (Enrutador / Firewall / Copia de seguridad / Monitoreo) en la oficina y para clientes.
-    \item Gestión de hardware para las capacitaciones y sistemas de servidor (+150 nodos).
-    \item Realización de capacitaciones en los campos de Linux y administración general del sistema.
-    \item Soporte de usuario final para Windows XP-7 y MS Office Suite (2003-2007).
-    \item Tecnologías típicas usadas en proyectos:
       \begin{cvitems} % Description(s) of tasks/responsibilities
-          \begin{itemize}
-            \item Windows XP-7, Windows Server 2003-2008 R2, Debian Linux 5+, CentOS 5/6
-            \item Active Directory, Group Policies
-            \item IPCop, openvpn, Squid, Samba, Nagios, Bittorrent, Clonezilla
-            \item bash, PHP, Perl, VBScript, Powershell
-          \end{itemize}
+      \item Administrador de toda la infraestructura TI de la oficina, servidores
+      \item Implementación de Microsoft (Windows Server / Office / Exchange) y soluciones basadas en Linux
+        (Enrutador / Firewall / Copia de seguridad / Monitoreo) en la oficina y para clientes.
+      \item Gestión de hardware para las capacitaciones y sistemas de servidor (+150 nodos).
+      \item Realización de capacitaciones en los campos de Linux y administración general del sistema.
+      \item Soporte de usuario final para Windows XP-7 y MS Office Suite (2003-2007).
+      \item Tecnologías típicas usadas en proyectos:
+        \begin{itemize}
+          \item Windows XP-7, Windows Server 2003-2008 R2, Debian Linux 5+, CentOS 5/6
+          \item Active Directory, Group Policies
+          \item IPCop, openvpn, Squid, Samba, Nagios, Bittorrent, Clonezilla
+          \item bash, PHP, Perl, VBScript, Powershell
+        \end{itemize}
       \end{cvitems}
     }
 
