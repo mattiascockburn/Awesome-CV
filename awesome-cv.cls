@@ -601,6 +601,24 @@
   \end{tabular*}
 }
 
+\newenvironment{cvpublications}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{\textwidth - 2.0cm} R{1.5cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+% Define a cvpublication for different publications in magazines, etc.
+% Usage: \cvsubentry{<title>}{<publication>}{<date>}{<description>}
+\newcommand*{\cvpublication}[4]{%
+  \entrytitlestyle{#1}. \entrypositionstyle{#3}, \entrypositionstyle{#2} \\
+  \subdescriptionstyle{#4} \\
+}
+
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
