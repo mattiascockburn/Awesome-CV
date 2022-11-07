@@ -31,11 +31,11 @@
       \begin{cvitems}
       \item Implementation of a fully automated deployment pipeline as well as a complete management
         stack for Ubuntu-based Laptops destined for Software developers. Security mechanisms like
-        Linux Full Disk Encryption with LUKS, always-on management VPN tunnel and storage of secrets
+        Linux Full Disk Encryption with LUKS, always-on management VPN tunnel to access the central
+        infrastructure hosted in the Azure cloud and storage of secrets
         like VPN certificates in the Laptops' TPM chip were implemented.
-      \item Technologies used: Microsoft Azure, openVPN, TPM 2 Software Stack, Salt, Python,
-        openssl
-        bash
+      \item Technologies used: Microsoft Azure, openvpn, TPM 2 Software Stack, Salt, Python,
+        openssl, bash
       \end{cvitems}
     }
   \cventry
@@ -163,10 +163,36 @@
 
 %---------------------------------------------------------
   \cventry
+    {DevOps Engineer} % Job title
+    {Mercedes-Benz Tech Innovation} % Organization
+    {Stuttgart, Germany} % Location
+    {March 2022 - PRESENT} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item Supporting internal developers in deploying and running different projects in the
+          internal Kubernetes infrastructure
+        \item Automation of said deployments via Github Action pipelines and ArgoCD and central
+          management of secrets via `bitnami/sealed-secrets`
+        \item Automation of common administration tasks using Python APIs of the aforementioned
+          applications
+        \item Typical technologies used in projects:
+          \begin{itemize}
+            \item OS: Ubuntu Linux 20.04/22.04
+            \item Kubernetes, Bitnami sealed-secrets
+            \item ArgoCD, argocd-image-updater, helm
+            \item Docker/podman
+            \item Python, Bash
+            \item Github/Github Actions
+            \item Prometheus/Grafana, ELK Stack
+            \item Atlassian Stack (Jira/Confluence)
+          \end{itemize}
+      \end{cvitems}
+    }
+  \cventry
     {Solution Architect} % Job title
     {B1 Systems GmbH} % Organization
     {Vohburg, Germany} % Location
-    {May 2011 - PRESENT} % Date(s)
+    {May 2011 - Dec. 2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item Delivering solutions for infrastructure automation and ease of administration in a variety of companies ranging from banks/insurance companies to automobile manufacturers, digital media agencies and software vendors
